@@ -1,12 +1,14 @@
 package com.revature.models;
 
+import java.sql.Timestamp;
+
 public class Transaction {
 	private int transactionId;
 	private int userId;
 	private int accountId;
 	private String transactionType;
 	private double amount;
-	private String timestamp;
+	private Timestamp timestamp;
 	
 	public Transaction() {
 		super();
@@ -14,7 +16,7 @@ public class Transaction {
 	}
 	
 	public Transaction(int transactionId, int userId, int accountId, String transactionType, double amount,
-			String timestamp) {
+			Timestamp timestamp) {
 		super();
 		this.transactionId = transactionId;
 		this.userId = userId;
@@ -64,11 +66,11 @@ public class Transaction {
 		this.amount = amount;
 	}
 
-	public String getTimestamp() {
+	public Timestamp getTimestamp() {
 		return timestamp;
 	}
 
-	public void setTimestamp(String timestamp) {
+	public void setTimestamp(Timestamp timestamp) {
 		this.timestamp = timestamp;
 	}
 

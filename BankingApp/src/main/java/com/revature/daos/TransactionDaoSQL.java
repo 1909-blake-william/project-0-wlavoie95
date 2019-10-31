@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,10 +26,10 @@ public class TransactionDaoSQL implements TransactionDao{
 		int tId = rs.getInt("t_id");
 		int uId = rs.getInt("u_id");
 		int aId = rs.getInt("a_id");
-		String tType = rs.getString("action");
+		String action = rs.getString("action");
 		double amount = rs.getDouble("amount");
-		String timestamp = rs.getString("timestamp");
-		return new Transaction(tId, uId, aId, tType, amount, timestamp);
+		Timestamp timestamp = rs.getTimestamp("t_time");
+		return new Transaction(tId, uId, aId, action, amount, timestamp);
 	}
 	
 	@Override
@@ -104,17 +105,17 @@ public class TransactionDaoSQL implements TransactionDao{
 	public int createLog(String action) {
 		User u = authUtil.getCurrentUser();
 		BankAccount b = authUtil.getCurrentBankAccount();
-		log.debug("attempting to add a new Bank Account to the DB");
+//		log.debug("attempting to add a new Bank Account to the DB");
 		try (Connection c = ConnectionUtil.getConnection()) {
 
-			String sql = "INSERT INTO transaction_log (a_id, u_id, action, timestamp) "
+			String sql = "INSERT INTO transaction_log (t_id, a_id, u_id, action, t_time) "
 					+ "VALUES (TRANSACTION_ID_SEQ.nextval, ?, ?, ?, ?)";
 
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setInt(1, b.getAccountId());
 			ps.setInt(2, u.getUserId());
 			ps.setString(3, action);
-			ps.setString(4, (LocalDateTime.now()).toString());
+			ps.setTimestamp(4, new Timestamp(System.currentTimeMillis()));
 			
 			return ps.executeUpdate();
 
@@ -129,20 +130,20 @@ public class TransactionDaoSQL implements TransactionDao{
 	public int createLog(String action, double amount) {
 		User u = authUtil.getCurrentUser();
 		BankAccount b = authUtil.getCurrentBankAccount();
-		log.debug("attempting to add a new Bank Account to the DB");
+//		log.debug("attempting to add a new Bank Account Transaction to the DB");
 		try (Connection c = ConnectionUtil.getConnection()) {
 
-			String sql = "INSERT INTO transaction_log (a_id, u_id, action, amount, timestamp) "
+			String sql = "INSERT INTO transaction_log (t_id, a_id, u_id, action, amount, t_time) "
 					+ "VALUES (TRANSACTION_ID_SEQ.nextval, ?, ?, ?, ?, ?)";
-
+			Timestamp ts = new Timestamp(System.currentTimeMillis());
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setInt(1, b.getAccountId());
-			ps.setInt(2, u.getUserId());
+			ps.setInt(2, u.getUserId());;
 			ps.setString(3, action);
 			ps.setDouble(4, amount);
-			ps.setString(5, (LocalDateTime.now()).toString());
+			ps.setTimestamp(5, ts);
 			
-			return ps.executeUpdate();
+			return ps.executeUpdate(); // <--- here
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

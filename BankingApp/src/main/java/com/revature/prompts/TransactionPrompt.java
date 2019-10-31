@@ -3,6 +3,7 @@ package com.revature.prompts;
 import java.util.Scanner;
 
 import com.revature.daos.BankAccountDao;
+import com.revature.daos.TransactionDao;
 import com.revature.daos.UserDao;
 import com.revature.models.BankAccount;
 import com.revature.models.User;
@@ -11,6 +12,7 @@ import com.revature.util.AuthUtil;
 public class TransactionPrompt implements Prompt{
 	private UserDao userDao = UserDao.currentImplementation;
 	private BankAccountDao bankAccountDao = BankAccountDao.currentImplementation;
+	private TransactionDao transactionDao = TransactionDao.currentImplementation;
 	private AuthUtil authUtil = AuthUtil.instance;
 	
 	@Override
@@ -33,6 +35,8 @@ public class TransactionPrompt implements Prompt{
 			double amount = scan.nextDouble();
 			scan.nextLine();
 			bankAccountDao.withdrawal(b, amount);
+			transactionDao.createLog("Withdrawal", amount);
+			System.out.println("Your new balance is: $" + b.getBalance() + ".");
 			break;
 		}
 		case 2:{
@@ -40,6 +44,8 @@ public class TransactionPrompt implements Prompt{
 			double amount = scan.nextDouble();
 			scan.nextLine();
 			bankAccountDao.deposit(b, amount);
+			transactionDao.createLog("Withdrawal", amount);
+			System.out.println("Your new balance is: $" + b.getBalance() + ".");
 			break;
 		}
 		case 3:{

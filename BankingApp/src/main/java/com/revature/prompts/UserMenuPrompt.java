@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import com.revature.daos.BankAccountDao;
+import com.revature.daos.TransactionDao;
 import com.revature.daos.UserDao;
 import com.revature.models.BankAccount;
 import com.revature.models.User;
@@ -12,19 +13,21 @@ import com.revature.util.AuthUtil;
 public class UserMenuPrompt implements Prompt {
 	private UserDao userDao = UserDao.currentImplementation;
 	private BankAccountDao bankAccountDao = BankAccountDao.currentImplementation;
-	private AuthUtil authUtil = AuthUtil.instance;
+	private TransactionDao transactionDao = TransactionDao.currentImplementation;
 
 	@Override
 	public Prompt run() {
+		AuthUtil authUtil = AuthUtil.instance;
 		User u = authUtil.getCurrentUser();
 		List<BankAccount> bankAccounts = bankAccountDao.listUserBankAccounts(u);
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Welcome, " + u.getUsername() + ". Please choose an option.");
 		System.out.println("Enter 1 to view your bank accounts.");
 		System.out.println("Enter 2 to open a new bank account.");
-		System.out.println("Enter 3 to select a bank account.");
-		System.out.println("Enter 4 to change password.");
-		System.out.println("Enter 5 to log out.");
+		System.out.println("Enter 3 to close a bank account.");
+		System.out.println("Enter 4 to select a bank account.");
+		System.out.println("Enter 5 to change password.");
+		System.out.println("Enter 6 to log out.");
 
 		int selection = scan.nextInt();
 		scan.nextLine();
@@ -78,10 +81,34 @@ public class UserMenuPrompt implements Prompt {
 				System.out.println("Please open a Bank Account before trying to access one.");
 				break;
 			}
-			
+
 			int aId = scan.nextInt();
 			BankAccount b = authUtil.loginBankAccount(aId);
-			
+			int closed = bankAccountDao.closeAccount(u, b);
+			if (closed != 0) {
+				transactionDao.createLog("Account Closed");
+			}
+			authUtil.logoutBankAccount();
+			break;
+		}
+
+		case 4: {
+			System.out.println("Please select a Bank Account by ID from the following: ");
+			System.out.println();
+			if (bankAccounts != null && bankAccounts.size() > 0) {
+				for (BankAccount b : bankAccounts) {
+					if (b.isActive()) {
+						System.out.println(b);
+					}
+				}
+			} else {
+				System.out.println("Please open a Bank Account before trying to access one.");
+				break;
+			}
+
+			int aId = scan.nextInt();
+			BankAccount b = authUtil.loginBankAccount(aId);
+
 			if (b != null) {
 				return PromptFactory.transactionMenu;
 			} else {
@@ -90,7 +117,7 @@ public class UserMenuPrompt implements Prompt {
 			}
 		}
 
-		case 4: {
+		case 5: {
 			System.out.println("Please confirm your old password.");
 			String oldPass = scan.nextLine();
 			if (oldPass.equals(u.getPassword())) {
@@ -104,7 +131,7 @@ public class UserMenuPrompt implements Prompt {
 			break;
 		}
 
-		case 5: {
+		case 6: {
 			System.out.println("Logging out.");
 			authUtil.logout();
 			System.out.println("Have a nice day!");

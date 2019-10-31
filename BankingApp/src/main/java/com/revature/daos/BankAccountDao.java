@@ -17,10 +17,10 @@ public interface BankAccountDao {
 	
 	int addBankAccount(User u, BankAccount b);
 	
-	void deposit(BankAccount b, double amount);
+	int deposit(BankAccount b, double amount);
 	
-	void withdrawal(BankAccount b, double amount);
+	int withdrawal(BankAccount b, double amount);
 	
-	void closeAccount(User u, BankAccount b);
+	int closeAccount(User u, BankAccount b);
 	
 }

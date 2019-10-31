@@ -66,3 +66,55 @@
 2019-10-31 07:26:27 DEBUG UserDaoSQL:63 - attempting to add a new user to the DB
 2019-10-31 07:46:26 DEBUG UserDaoSQL:63 - attempting to add a new user to the DB
 2019-10-31 08:14:06 DEBUG BankAccountDaoSQL:90 - Attempted to find a Bank Account by ID
+2019-10-31 08:58:08 DEBUG BankAccountDaoSQL:90 - Attempted to find a Bank Account by ID
+2019-10-31 08:58:42 DEBUG TransactionDaoSQL:132 - attempting to add a new Bank Account to the DB
+2019-10-31 09:05:25 DEBUG BankAccountDaoSQL:90 - Attempted to find a Bank Account by ID
+2019-10-31 09:05:28 DEBUG TransactionDaoSQL:133 - attempting to add a new Bank Account to the DB
+2019-10-31 09:09:43 DEBUG BankAccountDaoSQL:90 - Attempted to find a Bank Account by ID
+2019-10-31 09:09:45 DEBUG TransactionDaoSQL:133 - attempting to add a new Bank Account to the DB
+2019-10-31 09:10:58 DEBUG BankAccountDaoSQL:90 - Attempted to find a Bank Account by ID
+2019-10-31 09:11:02 DEBUG TransactionDaoSQL:133 - attempting to add a new Bank Account Transaction to the DB
+2019-10-31 09:12:54 DEBUG BankAccountDaoSQL:90 - Attempted to find a Bank Account by ID
+2019-10-31 09:12:57 DEBUG TransactionDaoSQL:133 - attempting to add a new Bank Account Transaction to the DB
+2019-10-31 09:15:37 DEBUG BankAccountDaoSQL:90 - Attempted to find a Bank Account by ID
+2019-10-31 09:15:40 DEBUG TransactionDaoSQL:133 - attempting to add a new Bank Account Transaction to the DB
+2019-10-31 09:16:15 DEBUG BankAccountDaoSQL:90 - Attempted to find a Bank Account by ID
+2019-10-31 09:16:21 DEBUG TransactionDaoSQL:133 - attempting to add a new Bank Account Transaction to the DB
+2019-10-31 09:21:51 DEBUG BankAccountDaoSQL:90 - Attempted to find a Bank Account by ID
+2019-10-31 09:22:10 DEBUG TransactionDaoSQL:133 - attempting to add a new Bank Account Transaction to the DB
+2019-10-31 09:23:03 DEBUG TransactionDaoSQL:133 - attempting to add a new Bank Account Transaction to the DB
+2019-10-31 09:24:10 DEBUG TransactionDaoSQL:133 - attempting to add a new Bank Account Transaction to the DB
+2019-10-31 09:24:28 DEBUG TransactionDaoSQL:133 - attempting to add a new Bank Account Transaction to the DB
+2019-10-31 09:25:14 DEBUG TransactionDaoSQL:133 - attempting to add a new Bank Account Transaction to the DB
+2019-10-31 09:30:52 DEBUG BankAccountDaoSQL:90 - Attempted to find a Bank Account by ID
+2019-10-31 09:30:54 DEBUG TransactionDaoSQL:133 - attempting to add a new Bank Account Transaction to the DB
+2019-10-31 09:35:07 DEBUG BankAccountDaoSQL:90 - Attempted to find a Bank Account by ID
+2019-10-31 09:35:10 DEBUG TransactionDaoSQL:133 - attempting to add a new Bank Account Transaction to the DB
+2019-10-31 09:41:27 DEBUG BankAccountDaoSQL:90 - Attempted to find a Bank Account by ID
+2019-10-31 09:41:29 DEBUG TransactionDaoSQL:133 - attempting to add a new Bank Account Transaction to the DB
+2019-10-31 09:46:04 DEBUG BankAccountDaoSQL:90 - Attempted to find a Bank Account by ID
+2019-10-31 09:46:07 DEBUG TransactionDaoSQL:133 - attempting to add a new Bank Account Transaction to the DB
+2019-10-31 09:47:05 DEBUG BankAccountDaoSQL:90 - Attempted to find a Bank Account by ID
+2019-10-31 09:47:08 DEBUG TransactionDaoSQL:133 - attempting to add a new Bank Account Transaction to the DB
+2019-10-31 09:47:17 DEBUG TransactionDaoSQL:133 - attempting to add a new Bank Account Transaction to the DB
+2019-10-31 09:49:05 DEBUG BankAccountDaoSQL:90 - Attempted to find a Bank Account by ID
+2019-10-31 09:49:09 DEBUG TransactionDaoSQL:133 - attempting to add a new Bank Account Transaction to the DB
+2019-10-31 09:50:25 DEBUG BankAccountDaoSQL:90 - Attempted to find a Bank Account by ID
+2019-10-31 09:50:29 DEBUG TransactionDaoSQL:133 - attempting to add a new Bank Account Transaction to the DB
+2019-10-31 10:04:00 DEBUG BankAccountDaoSQL:90 - Attempted to find a Bank Account by ID
+2019-10-31 10:04:06 DEBUG TransactionDaoSQL:133 - attempting to add a new Bank Account Transaction to the DB
+2019-10-31 10:04:27 DEBUG TransactionDaoSQL:133 - attempting to add a new Bank Account Transaction to the DB
+2019-10-31 10:11:21 DEBUG BankAccountDaoSQL:90 - Attempted to find a Bank Account by ID
+2019-10-31 10:11:53 DEBUG BankAccountDaoSQL:90 - Attempted to find a Bank Account by ID
+2019-10-31 10:11:56 DEBUG TransactionDaoSQL:133 - attempting to add a new Bank Account Transaction to the DB
+2019-10-31 10:12:01 DEBUG BankAccountDaoSQL:90 - Attempted to find a Bank Account by ID
+2019-10-31 10:12:04 DEBUG TransactionDaoSQL:133 - attempting to add a new Bank Account Transaction to the DB
+2019-10-31 10:14:36 DEBUG BankAccountDaoSQL:90 - Attempted to find a Bank Account by ID
+2019-10-31 10:14:38 DEBUG TransactionDaoSQL:133 - attempting to add a new Bank Account Transaction to the DB
+2019-10-31 10:14:42 DEBUG BankAccountDaoSQL:90 - Attempted to find a Bank Account by ID
+2019-10-31 10:14:45 DEBUG TransactionDaoSQL:133 - attempting to add a new Bank Account Transaction to the DB
+2019-10-31 10:21:53 DEBUG BankAccountDaoSQL:90 - Attempted to find a Bank Account by ID
+2019-10-31 10:21:56 DEBUG TransactionDaoSQL:133 - attempting to add a new Bank Account Transaction to the DB
+2019-10-31 10:22:11 DEBUG BankAccountDaoSQL:90 - Attempted to find a Bank Account by ID
+2019-10-31 10:22:14 DEBUG TransactionDaoSQL:133 - attempting to add a new Bank Account Transaction to the DB
+2019-10-31 10:22:58 DEBUG BankAccountDaoSQL:90 - Attempted to find a Bank Account by ID

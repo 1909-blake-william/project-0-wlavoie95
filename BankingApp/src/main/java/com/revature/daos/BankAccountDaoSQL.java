@@ -20,7 +20,7 @@ public class BankAccountDaoSQL implements BankAccountDao {
 	private UserDao userDao = UserDao.currentImplementation;
 	private TransactionDao transactionDao = TransactionDao.currentImplementation;
 
-	private BankAccountDaoSQL() {
+	public BankAccountDaoSQL() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -87,7 +87,7 @@ public class BankAccountDaoSQL implements BankAccountDao {
 
 	@Override
 	public BankAccount getBankAccountById(int id) {
-		log.debug("Attempted to find a Bank Account by ID");
+//		log.debug("Attempted to find a Bank Account by ID");
 		try (Connection c = ConnectionUtil.getConnection()) {
 
 			String sql = "SELECT * FROM bank_account " + "WHERE a_id = ?";
@@ -130,18 +130,31 @@ public class BankAccountDaoSQL implements BankAccountDao {
 	}
 
 	@Override
-	public void deposit(BankAccount b, double amount) {
+	public int deposit(BankAccount b, double amount) {
 		if (amount < 0) {
 			System.out.println("Cannot make a withdrawal with a deposit!");
 		} else {
 			b.setBalance(b.getBalance() + amount);
-			transactionDao.createLog("Deposit", amount);
-			System.out.println("Your new balance is: $" + b.getBalance() + ".");
+			try (Connection c = ConnectionUtil.getConnection()) {
+
+				String sql = "UPDATE  bank_account " + "SET balance = ? " + "WHERE a_id = ?";
+
+				PreparedStatement ps = c.prepareStatement(sql);
+				ps.setDouble(1, b.getBalance());
+				ps.setInt(2, b.getAccountId());
+				return ps.executeUpdate();
+
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				return 0;
+			}
 		}
+		return 0;
 	}
 
 	@Override
-	public void withdrawal(BankAccount b, double amount) {
+	public int withdrawal(BankAccount b, double amount) {
 		if (amount < 0) {
 			System.out.println("Cannot make a deposit with a withdrawal!");
 		} else {
@@ -151,19 +164,32 @@ public class BankAccountDaoSQL implements BankAccountDao {
 						+ b.getBalance() + ".");
 			} else {
 				b.setBalance(b.getBalance() - amount);
-				transactionDao.createLog("Withdrawal", amount);
-				System.out.println("Your new balance is: $" + b.getBalance() + ".");
+				try (Connection c = ConnectionUtil.getConnection()) {
+
+					String sql = "UPDATE  bank_account " + "SET balance = ? " + "WHERE a_id = ?";
+
+					PreparedStatement ps = c.prepareStatement(sql);
+					ps.setDouble(1, b.getBalance());
+					ps.setInt(2, b.getAccountId());
+					return ps.executeUpdate();
+
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+					return 0;
+				}
 			}
 		}
+		return 0;
 	}
 
 	@Override
-	public void closeAccount(User u, BankAccount b) {
+	public int closeAccount(User u, BankAccount b) {
 		if (b.getBalance() > 0) {
 			System.out.println("Account must have a balance of $0 to be closed.");
 		} else {
 			b.setActive(false);
-			log.debug("attempting to close a Bank Account");
+//			log.debug("attempting to close a Bank Account");
 			try (Connection c = ConnectionUtil.getConnection()) {
 				String sql = "UPDATE bank_account " + "SET  is_active = ? " + "WHERE a_id = ?";
 
@@ -171,15 +197,16 @@ public class BankAccountDaoSQL implements BankAccountDao {
 				ps.setInt(1, 0); // true is 1 and false is 0 for the DB, will always be 0 in this method
 				ps.setInt(2, b.getAccountId());
 
-				ps.executeUpdate();
-
+				return ps.executeUpdate();
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+				return 0;
 			}
 			
-			transactionDao.createLog("Bank Account Closed");
+			
 		}
+		return 0;
 	}
 
 }

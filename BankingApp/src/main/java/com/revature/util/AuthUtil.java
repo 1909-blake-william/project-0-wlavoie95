@@ -1,6 +1,6 @@
 package com.revature.util;
 
-import com.revature.daos.BankAccountDao;
+import com.revature.daos.BankAccountDaoSQL;
 import com.revature.daos.UserDao;
 import com.revature.models.BankAccount;
 import com.revature.models.User;
@@ -10,7 +10,7 @@ public class AuthUtil {
 
 	private UserDao userDao = UserDao.currentImplementation;
 	private User currentUser = null;
-	private BankAccountDao bankAccountDao = BankAccountDao.currentImplementation;
+	private BankAccountDaoSQL bankAccountDaoSQL = new BankAccountDaoSQL();
 	private BankAccount currentBankAccount = null;
 
 	private AuthUtil() {
@@ -33,8 +33,7 @@ public class AuthUtil {
 	}
 	
 	public BankAccount loginBankAccount(int bankAccountId) {
-		System.out.println(bankAccountId);
-		BankAccount b = bankAccountDao.getBankAccountById(bankAccountId);
+		BankAccount b = bankAccountDaoSQL.getBankAccountById(bankAccountId);
 		currentBankAccount = b;
 		return currentBankAccount;
 	}

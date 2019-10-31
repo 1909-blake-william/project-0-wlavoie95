@@ -1,0 +1,68 @@
+2019-10-28 20:49:21 DEBUG UserDaoSQL:120 - attempting to find user by credentials from DB
+2019-10-28 20:58:15 DEBUG UserDaoSQL:120 - attempting to find user by credentials from DB
+2019-10-28 21:07:11 DEBUG UserDaoSQL:120 - attempting to find user by credentials from DB
+2019-10-28 21:09:05 DEBUG UserDaoSQL:120 - attempting to find user by credentials from DB
+2019-10-28 21:11:19 DEBUG UserDaoSQL:120 - attempting to find user by credentials from DB
+2019-10-30 10:19:46 DEBUG UserDaoSQL:63 - attempting to add a new user to the DB
+2019-10-30 10:23:28 DEBUG UserDaoSQL:63 - attempting to add a new user to the DB
+2019-10-30 10:30:33 DEBUG UserDaoSQL:63 - attempting to add a new user to the DB
+2019-10-30 13:40:35 DEBUG BankAccountDaoSQL:47 - attempting to find the user's bank accounts from DB
+2019-10-30 13:40:42 DEBUG BankAccountDaoSQL:47 - attempting to find the user's bank accounts from DB
+2019-10-30 13:40:54 DEBUG BankAccountDaoSQL:47 - attempting to find the user's bank accounts from DB
+2019-10-30 13:41:30 DEBUG BankAccountDaoSQL:47 - attempting to find the user's bank accounts from DB
+2019-10-30 13:43:16 DEBUG BankAccountDaoSQL:47 - attempting to find the user's bank accounts from DB
+2019-10-30 13:43:49 DEBUG BankAccountDaoSQL:47 - attempting to find the user's bank accounts from DB
+2019-10-30 14:11:19 DEBUG BankAccountDaoSQL:47 - attempting to find the user's bank accounts from DB
+2019-10-30 14:12:34 DEBUG BankAccountDaoSQL:47 - attempting to find the user's bank accounts from DB
+2019-10-30 14:32:43 DEBUG UserDaoSQL:63 - attempting to add a new user to the DB
+2019-10-30 14:32:45 DEBUG BankAccountDaoSQL:47 - attempting to find the user's bank accounts from DB
+2019-10-30 14:39:14 DEBUG BankAccountDaoSQL:47 - attempting to find the user's bank accounts from DB
+2019-10-30 14:43:05 DEBUG BankAccountDaoSQL:43 - attempting to find the user's bank accounts from DB
+2019-10-30 14:44:59 DEBUG UserDaoSQL:63 - attempting to add a new user to the DB
+2019-10-30 15:15:40 DEBUG BankAccountDaoSQL:70 - attempting to add a new Bank Account to the DB
+2019-10-30 15:15:42 DEBUG BankAccountDaoSQL:43 - attempting to find the user's bank accounts from DB
+2019-10-30 15:15:56 DEBUG BankAccountDaoSQL:43 - attempting to find the user's bank accounts from DB
+2019-10-30 15:19:51 DEBUG BankAccountDaoSQL:70 - attempting to add a new Bank Account to the DB
+2019-10-30 15:20:43 DEBUG BankAccountDaoSQL:70 - attempting to add a new Bank Account to the DB
+2019-10-30 15:22:38 DEBUG BankAccountDaoSQL:70 - attempting to add a new Bank Account to the DB
+2019-10-30 15:27:14 DEBUG BankAccountDaoSQL:71 - attempting to add a new Bank Account to the DB
+2019-10-30 15:28:25 DEBUG BankAccountDaoSQL:70 - attempting to add a new Bank Account to the DB
+2019-10-30 15:30:12 DEBUG BankAccountDaoSQL:70 - attempting to add a new Bank Account to the DB
+2019-10-30 15:30:18 DEBUG BankAccountDaoSQL:43 - attempting to find the user's bank accounts from DB
+2019-10-30 15:45:23 DEBUG BankAccountDaoSQL:43 - attempting to find the user's bank accounts from DB
+2019-10-30 15:45:32 DEBUG BankAccountDaoSQL:43 - attempting to find the user's bank accounts from DB
+2019-10-30 15:45:53 DEBUG UserDaoSQL:63 - attempting to add a new user to the DB
+2019-10-30 15:45:56 DEBUG BankAccountDaoSQL:43 - attempting to find the user's bank accounts from DB
+2019-10-30 15:46:03 DEBUG BankAccountDaoSQL:43 - attempting to find the user's bank accounts from DB
+2019-10-30 15:46:33 DEBUG BankAccountDaoSQL:70 - attempting to add a new Bank Account to the DB
+2019-10-30 15:46:34 DEBUG BankAccountDaoSQL:43 - attempting to find the user's bank accounts from DB
+2019-10-30 15:46:38 DEBUG BankAccountDaoSQL:43 - attempting to find the user's bank accounts from DB
+2019-10-30 15:57:33 DEBUG UserDaoSQL:40 - attempting to find user by credentials from DB
+2019-10-30 16:00:10 DEBUG UserDaoSQL:40 - attempting to find user by credentials from DB
+2019-10-30 16:01:31 DEBUG UserDaoSQL:40 - attempting to find user by credentials from DB
+2019-10-30 16:02:18 DEBUG UserDaoSQL:40 - attempting to find user by credentials from DB
+2019-10-30 16:03:30 DEBUG BankAccountDaoSQL:91 - attempting to find all bank accounts from DB
+2019-10-31 00:42:35 DEBUG BankAccountDaoSQL:43 - attempting to find the user's bank accounts from DB
+2019-10-31 00:42:38 DEBUG BankAccountDaoSQL:43 - attempting to find the user's bank accounts from DB
+2019-10-31 00:42:48 DEBUG BankAccountDaoSQL:142 - attempting to add a new Bank Account to the DB
+2019-10-31 00:42:49 DEBUG BankAccountDaoSQL:43 - attempting to find the user's bank accounts from DB
+2019-10-31 00:42:55 DEBUG BankAccountDaoSQL:43 - attempting to find the user's bank accounts from DB
+2019-10-31 00:49:45 DEBUG UserDaoSQL:40 - attempting to find user by credentials from DB
+2019-10-31 00:50:54 DEBUG UserDaoSQL:40 - attempting to find user by credentials from DB
+2019-10-31 00:53:08 DEBUG UserDaoSQL:111 - attempting to find user by username from DB
+2019-10-31 00:53:16 DEBUG UserDaoSQL:111 - attempting to find user by username from DB
+2019-10-31 00:56:23 DEBUG BankAccountDaoSQL:95 - attempting to find all bank accounts from DB
+2019-10-31 00:56:32 DEBUG UserDaoSQL:111 - attempting to find user by username from DB
+2019-10-31 00:56:32 DEBUG BankAccountDaoSQL:69 - attempting to find the user's bank accounts from DB
+2019-10-31 00:57:30 DEBUG BankAccountDaoSQL:95 - attempting to find all bank accounts from DB
+2019-10-31 00:57:36 DEBUG UserDaoSQL:111 - attempting to find user by username from DB
+2019-10-31 00:57:36 DEBUG BankAccountDaoSQL:69 - attempting to find the user's bank accounts from DB
+2019-10-31 01:00:55 DEBUG UserDaoSQL:111 - attempting to find user by username from DB
+2019-10-31 01:00:55 DEBUG BankAccountDaoSQL:69 - attempting to find the user's bank accounts from DB
+2019-10-31 05:51:31 DEBUG BankAccountDaoSQL:43 - attempting to find the user's bank accounts from DB
+2019-10-31 05:53:25 DEBUG BankAccountDaoSQL:43 - attempting to find the user's bank accounts from DB
+2019-10-31 05:53:34 DEBUG BankAccountDaoSQL:43 - attempting to find the user's bank accounts from DB
+2019-10-31 05:53:43 DEBUG BankAccountDaoSQL:43 - attempting to find the user's bank accounts from DB
+2019-10-31 07:26:27 DEBUG UserDaoSQL:63 - attempting to add a new user to the DB
+2019-10-31 07:46:26 DEBUG UserDaoSQL:63 - attempting to add a new user to the DB
+2019-10-31 08:14:06 DEBUG BankAccountDaoSQL:90 - Attempted to find a Bank Account by ID
